@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">JustChat</string>
+    <string name="welcome">Welcome!</string>
+    <string name="log_in">Please Log In!</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="log_in_btn">Log In</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="add_image">Add Image</string>
+    <string name="name_hint">Name</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="sign_up_btn">Sign Up</string>
+    <string name="create_new_account_">Create new account!</string>
+    <string name="select_user">Select user</string>
+    <string name="type_your_message_here">Type your message here</string>
+    <string name="online">Online</string>
+</resources>

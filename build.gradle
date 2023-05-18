@@ -1,27 +1,52 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-buildscript {
-
-    repositories {
-
-        google()  // Google's Maven repository
-
-        mavenCentral()  // Maven Central repository
-
-    }
-
-    dependencies {
-
-        // Add the dependency for the Google services Gradle plugin
-
-        classpath 'com.google.gms:google-services:4.3.15'
-
-    }
-
-}
 plugins {
-    id 'com.android.application' version '7.4.2' apply false
-    id 'com.android.library' version '7.4.2' apply false
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
 }
 
+android {
+    namespace 'com.pips_corp.justchat'
+    compileSdk 33
 
+    defaultConfig {
+        applicationId "com.pips_corp.justchat"
+        minSdk 26
+        targetSdk 33
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0"
 
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.2'
+    implementation 'com.google.firebase:firebase-firestore:24.6.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+}

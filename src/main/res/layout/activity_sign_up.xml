@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:clipToPadding="false"
+    android:padding="@dimen/_24sdp"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="@string/create_new_account_"
+            android:textColor="@color/purple_700"
+            android:textSize="@dimen/_22ssp"
+            android:textStyle="bold"/>
+
+        <FrameLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:id="@+id/profileImage"
+                android:background="@drawable/back_im"
+                app:riv_oval="true"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/textAddImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_image"
+                android:layout_gravity="center"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/_10ssp"/>
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:background="@drawable/back_in"
+            android:hint="@string/name_hint"
+            android:textColorHint="@color/gray"
+            android:importantForAutofill="no"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"/>
+
+        <EditText
+            android:id="@+id/Emailsignup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/back_in"
+            android:hint="@string/email_hint"
+            android:textColorHint="@color/gray"
+            android:importantForAutofill="no"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"/>
+
+        <EditText
+            android:id="@+id/Passwordsignup"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/back_in"
+            android:hint="@string/password_hint"
+            android:textColorHint="@color/gray"
+            android:importantForAutofill="no"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"/>
+
+        <EditText
+            android:id="@+id/Confirm_Password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/back_in"
+            android:hint="@string/confirm_password"
+            android:textColorHint="@color/gray"
+            android:importantForAutofill="no"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:animateLayoutChanges="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:id="@+id/btnsignup"
+                android:text="@string/sign_up_btn"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                app:cornerRadius="@dimen/_10sdp"
+                android:textStyle="bold"/>
+        
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Alreadyhaveacc"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="Already have account?"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_400"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
